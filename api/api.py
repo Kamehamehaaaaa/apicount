@@ -81,7 +81,7 @@ class RedisDatabase:
         pass
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates')
 CORS(app)  # Enable CORS for all routes
 redis_db = RedisDatabase()  # Initialize Redis database connection
 ratelimitter = Limiter(
